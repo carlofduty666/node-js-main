@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: none; */
+    box-sizing: border-box;
+    max-width: 100vw;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+body {
+    background: black;
+    background-size: cover;
+}
+
+header {
+    background-color: #1a1a1a; /* Fondo oscuro para el encabezado */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    color: #00BFFF; /* Azul Klein */
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+nav {
+    background-color: #333; /* Fondo oscuro para la barra de navegación */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+}
+
+nav ul li a {
+    color: #00BFFF; /* Azul Klein para los enlaces */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block; /* Permite aplicar padding */
+}
+
+nav ul li a:hover {
+    background-color: #00BFFF; /* Cambia el fondo al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}
+
+main {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #222; /* Fondo oscuro para las cartas */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 150px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de aspecto y recorta si es necesario */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.card h2 {
+    color: #00BFFF; /* Azul Klein para los títulos de las cartas */
+}
+
+.card p {
+    color: #ccc; /* Texto gris claro para las descripciones */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1a1a1a; /* Fondo oscuro para el pie de página */
+}
+
+.title, p, h1, h2, h3 {
+    color: white
+}
+
+.sucessMessage{
+    position: absolute;
+    padding: 1rem;
+    display: none;
+    background-color: #2ad37e;
+    border-radius: 1rem;
+    top: 30%;
+    left: 41%;
+    z-index: 99;
+    text-align: center;
+  }
+
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section img {
+    max-height: 70vh;
+}
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,121,60,1) 35%, rgba(0,212,255,1) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.loader-animation{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    border: 75px blueviolet solid;
+    border-left-color: rgb(187, 144, 228);
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+};
