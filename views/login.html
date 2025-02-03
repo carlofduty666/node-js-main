@@ -3,59 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-2.css">
     <title>Login</title>
     
 </head>
 <body>
-    <form action="" id="formLibros">
-        <input type="text" id="name">
-        <select name="" id="sign">
-            <option value="">--</option>
-            <option value="aries">Aries</option>
-            <option value="tauro">Tauro</option>
-            <option value="geminis">Geminis</option>
-            <option value="cancer">Cáncer</option>
-            <option value="leo">Leo</option>
-            <option value="virgo">Virgo</option>
-            <option value="libra">Libra</option>
-            <option value="escorpio">Escorpio</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="acuario">Acuario</option>
-            <option value="piscis">Piscis</option>
-        </select>
-        <button type="submit">Guardar libro</button>
-    </form>
+    <header>
+        <h1>Compatibilidad de Signos Zodiacales</h1>
+        <p>Ingresa los nombres y signos para comprobar la compatibilidad.</p>
+    </header>
 
-    <form action="" id="formLibrosE">
-        <input type="text" id="nameE">
-        <select name="" id="sign">
-            <option value="">--</option>
-            <option value="aries">Aries</option>
-            <option value="tauro">Tauro</option>
-            <option value="geminis">Geminis</option>
-            <option value="cancer">Cáncer</option>
-            <option value="leo">Leo</option>
-            <option value="virgo">Virgo</option>
-            <option value="libra">Libra</option>
-            <option value="escorpio">Escorpio</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="acuario">Acuario</option>
-            <option value="piscis">Piscis</option>
-        </select>
-        <button type="submit">Actualizar libro</button>
-    </form>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Compatibilidad de Signos</a></li>
+        </ul>
+    </nav>
 
-    <div class="sucessMessage" id="sucessMessage"></div>
+    <main>
+        <div class="form-container">
+            <div class="form-container">
+                <form action="" id="formLibros">
+                    <input type="text" id="name" placeholder="Nombre 1">
+                    <select id="sign">
+                        <option value="">-- Selecciona tu signo --</option>
+                        <option value="aries">Aries</option>
+                        <option value="tauro">Tauro</option>
+                        <option value="geminis">Géminis</option>
+                        <option value="cancer">Cáncer</option>
+                        <option value="leo">Leo</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="libra">Libra</option>
+                        <option value="escorpio">Escorpio</option>
+                        <option value="sagitario">Sagitario</option>
+                        <option value="capricornio">Capricornio</option>
+                        <option value="acuario">Acuario</option>
+                        <option value="piscis">Piscis</option>
+                    </select>
+                    <button type="submit">Guardar Signo</button>
+                </form>
+            
+                <form id="comparisonForm">
+                    <select id="name1"></select> <!-- Dropdown para seleccionar el primer nombre -->
+                    <select id="name2"></select> <!-- Dropdown para seleccionar el segundo nombre -->
+                    
+                    <button type="button" id="checkCompatibilityButton">Comprobar Compatibilidad</button>
+                </form>
+            
+                <!-- Sección para mostrar el resultado de la comparación -->
+                <div id="compatibilityResult"></div>
+            
 
-    <div class="sucessMessage" id="sucessMessage1"></div>
+            <form action="" id="formLibrosE" style="display: none;">
+                <input type="text" id="nameE" placeholder="Nombre">
+                <select id="signE">
+                    <option value="">-- Selecciona tu signo --</option>
+                    <option value="aries">Aries</option>
+                    <option value="tauro">Tauro</option>
+                    <option value="geminis">Géminis</option>
+                    <option value="cancer">Cáncer</option>
+                    <option value="leo">Leo</option>
+                    <option value="virgo">Virgo</option>
+                    <option value="libra">Libra</option>
+                    <option value="escorpio">Escorpio</option>
+                    <option value="sagitario">Sagitario</option>
+                    <option value="capricornio">Capricornio</option>
+                    <option value="acuario">Acuario</option>
+                    <option value="piscis">Piscis</option>
+                </select>
+                <button type="submit">Actualizar Signo</button>
+            </form>
 
-    <div id="app">
+            <button id="toggleDataButton">Mostrar Datos</button>
 
-    </div>
+            <!-- Mensajes de éxito -->
+            <div class="sucessMessage" id="sucessMessage"></div>
+            <div class="sucessMessage" id="sucessMessage1"></div>
+            <div class="sucessMessage" id="sucessMessage3"></div>
+
+            <!-- Sección donde se mostrarán los datos -->
+            <div id="app" style="display: none;"></div>
+
+        </div> <!-- .form-container -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tarot Online. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="crud.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

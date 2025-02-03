@@ -10,6 +10,10 @@
     
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     background: black;
     background-size: cover;
